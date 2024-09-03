@@ -1,0 +1,194 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with Nano Blue Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #4a90e2, #50e3c2, #4a90e2, #50e3c2);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Keyframe for Animated Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('background_image.jpg');
+    min-height: 90vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.content img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.1);
+}
+
+/* Centered, Smaller Wish Box */
+.wish-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    width: 60%; /* Adjusted width to 60% */
+    max-width: 350px;
+    color: #333;
+    margin: 0 auto; /* Centered the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wish-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.wish-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wish-box input, 
+.wish-box textarea {
+    padding: 10px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.wish-box button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.wish-box button:hover {
+    background-color: #50e3c2;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+#gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background: linear-gradient(-45deg, #4a90e2, #50e3c2, #4a90e2, #50e3c2);
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Section */
+footer {
+    
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Thank You Pop-up */
+.thank-you-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4a90e2; /* Blue background color */
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px; /* Fixed width */
+}
+
+.popup-content .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white; /* Match close button color with background */
+}
+
+.popup-content p {
+    font-size: 1.2em; /* Adjusted font size */
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 3em;
+    }
+
+    .wish-box {
+        width: 80%;
+    }
+}
+
+
+
+
